@@ -8,7 +8,7 @@ namespace ConsoleApp1
     {
         public static List<string> GetWords(string input)
         {
-            MatchCollection matches = Regex.Matches(input, @"\b[\w']*\b");
+            MatchCollection matches = Regex.Matches(input, @"\b[\w']*\b$%");
 
             var words = from m in matches.Cast<Match>()
                         where !string.IsNullOrEmpty(m.Value)
